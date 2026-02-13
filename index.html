@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Otkup i prodaja školskih udžbenika | Judita Šibenik</title>
+    <meta name="description" content="Otkup i prodaja rabljenih školskih udžbenika u Šibeniku. Uštedite do 40% i opremite svoga srednjoškolca">
+
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="nav-paper" role="banner">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <img src="./images/judita_logo.svg" alt="antikvarija judita logo">
+            </a>
+            
+            <button class="menu-toggle" aria-label="Otvori meni" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="#home">Naslovna</a></li>
+                <li><a href="#kako-funkcionira">Otkup</a></li>
+                <li><a href="#otkup-prodaja">Prodaja</a></li>
+                <li><a href="#galerija">Galerija</a></li>
+                <li><a href="#o-nama">O nama</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-notebook">
+        <div class="notebook-spread">
+            <div class="notebook-page notebook-left">
+                <div class="notebook-lines"></div>
+                <div class="margin-line"></div>
+                
+                <div class="notebook-holes holes-inner-left">
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                </div>
+                
+                <div class="page-content">
+                    <div class="badge">
+                        <span>Polovni udžbenici za srednjoškolce</span>
+                    </div>
+                    
+                    <h1 class="main-title">
+                        Otkup i prodaja školskih udžbenika u Šibeniku<br>
+                        <span class="highlight">do 40% uštede</span>
+                    </h1>
+                    
+                    <p class="lead-text">
+                        Vašem školarcu trebaju novi udžbenici? U Šibeniku otkupljujemo i prodajemo rabljene školske knjige srednjih škola. 
+                    </p>
+
+                    
+                    <div class="cta-buttons">
+                        <a href="#kontakt" class="btn btn-primary">Kontaktiraj nas</a>
+                        <a href="#kako-funkcionira" class="btn btn-secondary">Kako radi?</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="center-shadow"></div>
+            
+            <div class="notebook-page notebook-right">
+                <div class="notebook-lines"></div>
+                
+                <div class="notebook-holes holes-inner-right">
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                </div>
+                
+                <div class="page-content page-content-center">
+                    <div class="image-wrapper">
+                        <img src="./images/otkupimg.svg" alt="Antikvarijat Judita Šibenik" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-simple">
+        <div class="container">
+            <div class="info-content">
+                <h2 class="info-title handwritten">Zašto Antikvarijat Judita?</h2>
+                <div class="info-ribbon">
+                    <div class="ribbon-item">
+                        <span class="ribbon-icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <circle cx="14" cy="14" r="12" fill="#B8E6D5" stroke="#2C2520" stroke-width="1.5"/>
+                                <text x="14" y="18" font-size="13" text-anchor="middle" fill="#2C2520" font-weight="bold">€</text>
+                            </svg>
+                        </span>
+                        <div>
+                            <strong>Uštedi novac</strong>
+                            <span class="ribbon-desc">Do 40% uštede u odnosu na nove udžbenike.</span>
+                        </div>
+                    </div>
+                    <div class="ribbon-divider"></div>
+                    <div class="ribbon-item">
+                        <span class="ribbon-icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <circle cx="14" cy="14" r="12" fill="#A7D8F0" stroke="#2C2520" stroke-width="1.5"/>
+                                <path d="M9 14 L13 18 L19 10" stroke="#2C2520" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <strong>Dugogodišnje iskustvo</strong>
+                            <span class="ribbon-desc">Poslujemo od davne 2012. godine.</span>
+                        </div>
+                    </div>
+                    <div class="ribbon-divider"></div>
+                    <div class="ribbon-item">
+                        <span class="ribbon-icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <circle cx="14" cy="14" r="12" fill="#FFE5A0" stroke="#2C2520" stroke-width="1.5"/>
+                                <path d="M10 11 L14 8 L18 11 L18 17 L14 20 L10 17Z" stroke="#2C2520" stroke-width="1.5" fill="none"/>
+                            </svg>
+                        </span>
+                    <div>
+                        <strong>Prodajni asortiman</strong>
+                        <span class="ribbon-desc">U Šibeniku nudimo rabljene školske udžbenike, školski i darovni asortiman, print i fotokopiranje.</span>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kako-funkcionira" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-accent handwritten">Kako otkup</span>
+                    <span class="title-main">funkcionira?</span>
+                </h2>
+                <p class="section-subtitle">Tvoje stare knjige su vrijedne!</p>
+            </div>
+            
+            <div class="notebook-steps">
+                <div class="sticky-note sticky-yellow">
+                    <div class="sticky-tape"></div>
+                    <span class="sticky-number handwritten">01</span>
+                    <h3 class="sticky-title">Donesi udžbenike</h3>
+                    <p class="sticky-text">Donesi svoje stare udžbenike u našu poslovnicu ili nam pošalji popis putem e-maila s naslovima, autorima i izdavačima.</p>
+                </div>
+
+                <div class="sticky-note sticky-blue">
+                    <div class="sticky-tape"></div>
+                    <span class="sticky-number handwritten">02</span>
+                    <h3 class="sticky-title">Otkup udžbenika</h3>
+                    <p class="sticky-text">Otkupljujemo samo srednjoškolske udžbenike koji se još uvijek koriste u školama. Ne otkupljujemo pokidane ili išarane udžbenike i radne bilježnice </p>
+                </div>
+
+                <div class="sticky-note sticky-pink">
+                    <div class="sticky-tape"></div>
+                    <span class="sticky-number handwritten">03</span>
+                    <h3 class="sticky-title">Novac</h3>
+                    <p class="sticky-text">Cijena udžbenika u otkupu je od 3e do 8e, ovisno o cijeni novih. Uzmite novac i iskoristite ga za kupnju naših udžbenika za sljedeću školsku godinu!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="otkup-prodaja" class="buy-sell">
+        <div class="container">
+            <div class="sell-inner">
+                <h2 class="sell-heading">
+                    <span class="handwritten">Sve za školu</span>
+                    <span>na jednom mjestu!</span>
+                </h2>
+
+                <div class="sell-columns">
+                    <div class="sell-col sell-col--buy">
+                        <h3 class="sell-col-title handwritten">Školski udžbenici</h3>
+                        <ul class="sell-list">
+                            <li>Udžbenici, zbirke zadataka i radne bilježnice</li>
+                            <li>Gimnazije i strukovne srednje škole u Šibeniku</li>
+                        </ul>
+                    </div>
+                    <div class="sell-col sell-col--swap">
+                        <h3 class="sell-col-title handwritten">Pribor & usluge</h3>
+                        <ul class="sell-list">
+                            <li>Olovke, kemijske olovke, bilježnice, pernice, školske torbe</li>
+                            <li>Geometrijski pribor, kalkulatori</li>
+                            <li>Printanje, fotokopiranje, uvezivanje</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sell-cta">
+                    <p class="sell-cta-text">Posjetite nas na "Vanjskome" u Šibeniku i opremite Vašeg školarca u potpunosti!</p>
+                    <a href="#kontakt" class="btn-notebook btn-primary">Kontaktiraj nas!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galerija" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-accent handwritten">Naš prodajni</span>
+                    <span class="title-main">asortiman</span>
+                </h2>
+                <p class="section-subtitle">Pregledaj našu ponudu i prodajni prostor</p>
+            </div>
+
+            <div class="gallery-bento" id="galleryBento">
+                <div class="bento-item bento-tall" data-index="0">
+                    <img src="./images/gallery_0.jpg" alt="Naša poslovnica" loading="lazy">
+                    <div class="bento-overlay"><span class="bento-caption">Naša poslovnica</span></div>
+                </div>
+                <div class="bento-item" data-index="1">
+                    <img src="./images/gallery_2.jpg" alt="Police sa knjigama" loading="lazy">
+                    <div class="bento-overlay"><span class="bento-caption">Police sa knjigama</span></div>
+                </div>
+                <div class="bento-item" data-index="2">
+                    <img src="./images/gallery_3.jpg" alt="Unutrašnjost prodavaonice" loading="lazy">
+                    <div class="bento-overlay"><span class="bento-caption">Unutrašnjost prodavaonice</span></div>
+                </div>
+                <div class="bento-item" data-index="3">
+                    <img src="./images/gallery_4.jpg" alt="Školski udžbenici" loading="lazy">
+                    <div class="bento-overlay"><span class="bento-caption">Školski udžbenici</span></div>
+                </div>
+                <div class="bento-item bento-more" data-index="4">
+                    <img src="./images/gallery_1.jpg" alt="Prodajni pult" loading="lazy">
+                    <div class="bento-overlay bento-overlay-more">
+                        <span class="bento-more-count" id="bentoMoreCount"></span>
+                        <span class="bento-more-text">Pogledaj sve</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="galleryHidden" style="display:none;">
+                <img src="./images/gallery_5.jpg" alt="Organizirane police">
+                <img src="./images/gallery_6.jpg" alt="Velika ponuda knjiga">
+                <img src="./images/gallery_7.jpg" alt="Srednji udžbenici">
+                <img src="./images/gallery_8.jpg" alt="Radni prostor">
+                <img src="./images/gallery_9.jpg" alt="Dodatna ponuda">
+                <img src="./images/gallery_10.jpg" alt="Naša prodavaonica">
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Zatvori">&times;</button>
+        <button class="lightbox-prev" aria-label="Prethodna slika">&#10094;</button>
+        <button class="lightbox-next" aria-label="Sljedeća slika">&#10095;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img" id="lightboxImg">
+        </div>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+
+    <section id="o-nama" class="about-section">
+        <div class="container">
+            <div class="about-inner">
+                <h2 class="section-title">
+                    <span class="title-accent handwritten">O</span>
+                    <span class="title-main">nama</span>
+                </h2>
+
+                <div class="about-body">
+                    <p class="about-lead">
+                    <strong>Antikvarijat Judita</strong> već više od desetljeća opskrbljuje školarce rabljenim školskim udžbenicima i priborom u Šibensko-kninskoj županiji.
+                    </p>
+                    <p class="about-para">
+                    Poslujemo od 2012. godine s ciljem da svi školarci dobiju potrebne udžbenike i školski pribor. Naše ljubazno osoblje osigurava da nabavka knjiga prođe brzo, jednostavno i bez stresa.
+                    </p>
+                </div>
+
+                <div class="about-numbers">
+                    <div class="about-num">
+                        <span class="about-num-value handwritten">14+</span>
+                        <span class="about-num-label">Godina iskustva</span>
+                    </div>
+                    <div class="about-num">
+                        <span class="about-num-value handwritten">40%</span>
+                        <span class="about-num-label">Prosječna ušteda</span>
+                    </div>
+                    <div class="about-num">
+                        <span class="about-num-value handwritten">5000+</span>
+                        <span class="about-num-label">Zadovoljnih učenika</span>
+                    </div>
+                </div>
+
+                <p class="about-quote handwritten">Vaše zadovoljstvo je naša nagrada!</p>
+            </div>
+        </div>
+    </section>   
+
+    <section id="kontakt" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-accent handwritten">Javite</span>
+                    <span class="title-main">nam se</span>
+                </h2>
+            </div>
+
+            <div class="contact-top">
+                <div class="contact-info-strip">
+                    <div class="info-strip-item">
+                        <span class="info-strip-label">Telefon</span>
+                        <a href="tel:022215292">Dućan: 022 215 292</a>
+                        <a href="tel:0989808523">Telefon: 098 980 8523</a>
+                    </div>
+                    <div class="info-strip-item">
+                        <span class="info-strip-label">Email</span>
+                        <a href="mailto:antikvarijat.judita@gmail.com">antikvarijat.judita@gmail.com</a>
+                    </div>
+                    <div class="info-strip-item">
+                        <span class="info-strip-label">Adresa</span>
+                        <span>Put gimnazije 1, 22000 Šibenik</span>
+                    </div>
+                    <div class="info-strip-item">
+                        <span class="info-strip-label">Radno vrijeme</span>
+                        <span>Ljetno: Pon-Pet: 08h-20h</span>
+                        <span>Sub-Ned: Ne radimo</span>
+                        <span>Zimsko (31.10 do 01.06): Zatvoreno</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-main">
+                <div class="contact-map-large">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5934.699775962915!2d15.893359869112766!3d43.73391903026016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133525f58644e9dd%3A0xcf72368e6e4ba0b8!2sAntikvarijat%20Judita!5e0!3m2!1shr!2shr!4v1673098213139!5m2!1shr!2shr" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokacija Antikvarijata Judita"></iframe>
+                </div>
+                <div class="contact-shop-photo">
+                    <img src="./images/otkupimg.svg" alt="Antikvarijat Judita">
+                </div>
+            </div>
+
+            <div class="contact-form-section">
+                <div class="contact-form-wrapper">
+                    <div class="form-header">
+                        <h3 class="form-title handwritten">Pošalji upit</h3>
+                        <p class="form-subtitle">Ispuni formu i javit ćemo ti se u najkraćem roku</p>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row form-row--3">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Ime i prezime</label>
+                                <input type="text" id="name" class="form-input" placeholder="Tvoje ime..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" class="form-input" placeholder="tvoj@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Telefon</label>
+                                <input type="tel" id="phone" class="form-input" placeholder="098 123 4567">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Tema</label>
+                                <select id="subject" class="form-input">
+                                    <option value="">Odaberi temu...</option>
+                                    <option value="otkup">Otkup udžbenika</option>
+                                    <option value="kupnja">Kupnja udžbenika</option>
+                                    <option value="ostalo">Ostalo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Poruka</label>
+                                <textarea id="message" class="form-input form-textarea" rows="3" placeholder="Napiši svoju poruku ovdje..." required></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            <span>Pošalji poruku</span>
+                            <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M2 10 L18 10 M13 5 L18 10 L13 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+
+                        <div class="form-message" id="formMessage"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-paper">
+        <div class="container">
+            <div class="footer-top">
+                <a href="#home" class="footer-logo">
+                    <img src="./images/judita_logo_footer.svg" alt="antikvarija judita logo">
+                </a>
+                <nav class="footer-nav">
+                    <a href="#home">Naslovna</a>
+                    <a href="#kako-funkcionira">Kako radi?</a>
+                    <a href="#otkup-prodaja">Otkup i Prodaja</a>
+                    <a href="#galerija">Galerija</a>
+                    <a href="#o-nama">O nama</a>
+                    <a href="#kontakt">Kontakt</a>
+                </nav>
+            </div>
+
+            <div class="footer-info">
+                <div class="footer-info-item">
+                    <span class="footer-info-label">Telefon</span>
+                    <a href="tel:022215292">Dućan: 022 215 292</a>
+                    <a href="tel:0989808523">Telefon: 098 980 8523</a>
+                </div>
+                <div class="footer-info-item">
+                    <span class="footer-info-label">Email</span>
+                    <a href="mailto:antikvarijat.judita@gmail.com">antikvarijat.judita@gmail.com</a>
+                </div>
+                <div class="footer-info-item">
+                    <span class="footer-info-label">Adresa</span>
+                    <span>Put gimnazije 1, Šibenik</span>
+                </div>
+                <div class="footer-info-item">
+                    <span class="footer-info-label">Radno vrijeme</span>
+                    <span>Ljetno: Pon-Pet 08h-20h</span>
+                    <span>Sub-Ned: Ne radimo</span>
+                    <span>Zimsko (31.10 do 01.06): Zatvoreno</span>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Antikvarijat Judita | Dexters Web</p>
+                <a href="https://www.facebook.com/antikvarijatjudita.sibenik/" class="footer-social-link" target="_blank" rel="noopener noreferrer">
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"/>
+                    </svg>
+                    Facebook
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
