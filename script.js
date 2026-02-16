@@ -1,10 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-document.querySelectorAll('img[title]').forEach(img => {
-    img.dataset.title = img.title;
-    img.removeAttribute('title');
-});
-
 const navEl = document.querySelector('.nav-paper');
 function setNavHeight() {
     if (navEl) {
