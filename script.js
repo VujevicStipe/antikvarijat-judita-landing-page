@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-// Set --nav-height CSS variable based on actual navbar height
+document.querySelectorAll('img[title]').forEach(img => {
+    img.dataset.title = img.title;
+    img.removeAttribute('title');
+});
+
 const navEl = document.querySelector('.nav-paper');
 function setNavHeight() {
     if (navEl) {
@@ -227,7 +231,6 @@ if (scrollIndicator) {
     });
 }
 
-// Capitalize ime i prezime - svaka riječ veliko početno slovo
 const nameInput = document.getElementById('name');
 if (nameInput) {
     nameInput.addEventListener('blur', function() {
@@ -235,7 +238,6 @@ if (nameInput) {
     });
 }
 
-// Poruka - veliko slovo na početku i nakon svake točke
 const messageInput = document.getElementById('message');
 if (messageInput) {
     messageInput.addEventListener('input', function() {
@@ -247,7 +249,6 @@ if (messageInput) {
     });
 }
 
-// EmailJS init
 emailjs.init('f9ShUie6D8zh0SBDx');
 
 const contactForm = document.getElementById('contactForm');
@@ -282,10 +283,8 @@ if (contactForm) {
         submitBtn.innerHTML = '<span>Šaljem...</span>';
 
         try {
-            // Send contact email
             await emailjs.send('service_os2d9gv', 'template_9cjnr5f', formData);
 
-            // Send auto-reply to user
             await emailjs.send('service_os2d9gv', 'template_rrolbbt', formData);
 
             formMessage.className = 'form-message success';

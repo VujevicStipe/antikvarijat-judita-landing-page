@@ -1327,7 +1327,6 @@ select.form-input { cursor: pointer; }
 
 .footer-social-link svg { display: block; }
 
-/* Desktop/laptop with short viewport - scale down hero content to fit */
 @media (min-width: 1025px) and (max-height: 940px) {
     .notebook-left {
         padding: var(--nav-height, 80px) 60px 30px 80px;
