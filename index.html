@@ -15,6 +15,7 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
     
     <link rel="stylesheet" href="style.css">
@@ -371,14 +372,14 @@
                             </div>
                             <div class="form-group">
                                 <label for="phone" class="form-label">Telefon</label>
-                                <input type="tel" id="phone" class="form-input" placeholder="098 123 4567">
+                                <input type="tel" id="phone" class="form-input" placeholder="098 123 4567" required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="subject" class="form-label">Tema</label>
-                                <select id="subject" class="form-input">
+                                <select id="subject" class="form-input" required>
                                     <option value="">Odaberi temu...</option>
                                     <option value="otkup">Otkup udžbenika</option>
                                     <option value="kupnja">Kupnja udžbenika</option>

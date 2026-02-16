@@ -1,5 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+// Set --nav-height CSS variable based on actual navbar height
+const navEl = document.querySelector('.nav-paper');
+function setNavHeight() {
+    if (navEl) {
+        document.documentElement.style.setProperty('--nav-height', navEl.offsetHeight + 'px');
+    }
+}
+setNavHeight();
+window.addEventListener('resize', setNavHeight);
+
 gsap.registerPlugin(ScrollTrigger);
 
 const bentoItems = document.querySelectorAll('.bento-item');
@@ -217,44 +227,86 @@ if (scrollIndicator) {
     });
 }
 
+// Capitalize ime i prezime - svaka riječ veliko početno slovo
+const nameInput = document.getElementById('name');
+if (nameInput) {
+    nameInput.addEventListener('blur', function() {
+        this.value = this.value.replace(/\b\w/g, c => c.toUpperCase());
+    });
+}
+
+// Poruka - veliko slovo na početku i nakon svake točke
+const messageInput = document.getElementById('message');
+if (messageInput) {
+    messageInput.addEventListener('input', function() {
+        const pos = this.selectionStart;
+        this.value = this.value
+            .replace(/^\s*\w/, c => c.toUpperCase())
+            .replace(/\.\s+\w/g, c => c.toUpperCase());
+        this.setSelectionRange(pos, pos);
+    });
+}
+
+// EmailJS init
+emailjs.init('f9ShUie6D8zh0SBDx');
+
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
 if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
-        
+
+        const emailInput = document.getElementById('email');
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(emailInput.value.trim())) {
+            formMessage.className = 'form-message error';
+            formMessage.textContent = 'Molimo unesite ispravnu email adresu.';
+            emailInput.focus();
+            setTimeout(() => { formMessage.className = 'form-message'; }, 4000);
+            return;
+        }
+
         const formData = {
             name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            phone: document.getElementById('phone').value || 'Nije navedeno',
-            subject: document.getElementById('subject').value || 'Općenito',
+            email: emailInput.value.trim(),
+            phone: document.getElementById('phone').value,
+            subject: document.getElementById('subject').value,
             message: document.getElementById('message').value
         };
-        
+
         const submitBtn = contactForm.querySelector('.btn-submit');
         const originalText = submitBtn.innerHTML;
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<span>Šaljem...</span>';
-        
-        setTimeout(() => {
+
+        try {
+            // Send contact email
+            await emailjs.send('service_os2d9gv', 'template_9cjnr5f', formData);
+
+            // Send auto-reply to user
+            await emailjs.send('service_os2d9gv', 'template_rrolbbt', formData);
+
             formMessage.className = 'form-message success';
             formMessage.textContent = '✓ Hvala! Tvoja poruka je uspješno poslana. Javit ćemo ti se uskoro!';
-            
             contactForm.reset();
+
+            setTimeout(() => {
+                formMessage.className = 'form-message';
+            }, 5000);
+        } catch (error) {
+            formMessage.className = 'form-message error';
+            formMessage.textContent = 'Greška pri slanju poruke. Pokušaj ponovo ili nas kontaktiraj telefonom.';
+            console.error('EmailJS error:', error);
+
+            setTimeout(() => {
+                formMessage.className = 'form-message';
+            }, 5000);
+        } finally {
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalText;
-            
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-                setTimeout(() => {
-                    formMessage.className = 'form-message';
-                    formMessage.style.display = 'block';
-                }, 300);
-            }, 5000);
-            
-            console.log('Form submitted:', formData);
-        }, 1500);
+        }
     });
 }
 
